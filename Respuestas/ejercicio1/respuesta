@@ -1,0 +1,2 @@
+El programa tira un error de segmentacion debido a que trata de acceder a un
+lugar en memoria no asignado. 
