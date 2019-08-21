@@ -1,10 +1,36 @@
 1. ¿Qué pasa cuando usted ejecuta este programa?
+
     El programa tira un error de segmentacion debido a que trata de acceder a un
     lugar en memoria no asignado. 
 
 2. ¿Qué muestra gdb?
+
     El debbuger copila el programa y nos muestra el mismo tipo de error que nos mostro 
     la terminal en el punto anterior, pero con la peculiaridad que nos muestra que linea
     causo dicho error.
     
-3.
+3. ¿Qué pasa cuando corre esto?¿Puede usted interpretar la salida de la herramienta anterior?
+
+    El programa se ejecuta pero muestra como salida informacion referente a lo ocurrido en 
+    la ejecucion. Informacion acerca de como se esta utilizando la memoria durante el proceso.
+
+
+4.¿Qué pasa cuando este programa se ejecuta?, ¿Puede usted usar gdb para encontrar problemas como este?, 
+¿Que dice acerca de Valgrind (de nuevo use este con la bandera --leak check=yes)?
+
+    El programa se ejecuta y termina de manera normal sin ningun contratiempo, exceptuando el hecho de que dejo memoria 
+    perdida. El gdb no nos muestra informacion acerca de este problema. 
+    El valgrind efectivamente nos muestra que memoria se utilizo durante la ejecucion y cual es la cantidad
+    de memoria perdida o que no se libero. 
+    
+5. ¿Qué pasa cuando este programa se ejecuta?, ¿Qué pasa cuando se corre el programa usando valgrind?,
+¿El programa es correcto?
+    
+     El programa se ejecuta y termina ejecutadose sin ningun contratiempo.
+     El valgrind efectivamente nos muestra que memoria se utilizo durante la ejecucion y cual es la cantidad
+    de memoria perdida o que no se libero. El programa no debe ser correcto debido a la gran cantidad de memoria
+    perdida en la ejecucion. 
+
+6. ¿El programa corre?, ¿Que pasa cuando hace uso de valgrind?
+
+    El programa corre, el valgrind tira un mensaje de error mostrando que uhubo una lectura invalidad y imprime un cero. 
